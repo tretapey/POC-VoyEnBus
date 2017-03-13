@@ -1,9 +1,11 @@
 <div id="app-paradas-input">
   <h4>PARADAS</h4>
-  <input id="paradas-input" 
-    *ngIf="isDataLoaded" 
-    auto-complete 
-    [(ngModel)]="parada" 
-    [source]="paradas" 
+  <input ng2-auto-complete [source]="paradas"
+    id="paradas-input"
+    [(ngModel)]="parada"
+    placeholder="Paradas..."
+    value-formatter="codigo"
+    list-formatter="nombre"
     min-chars="3"/>
+  <p>Selected: {{parada | json}}</p>
 </div>

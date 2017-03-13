@@ -11,7 +11,7 @@ import { ParadaService }  from './parada.service';
 })
 export class ParadasInputComponent implements OnInit {
   parada: Parada;
-  paradas: String[];
+  paradas: Parada[];
   isDataLoaded:boolean = false;
 
   constructor(
@@ -24,9 +24,7 @@ export class ParadasInputComponent implements OnInit {
   
   getParadas(): void {
     this.paradaService.getParadas().then(paradas => {
-      this.paradas = paradas.map(parada => {
-        return parada.nombre;
-      });
+      this.paradas = paradas;
       this.isDataLoaded = true;
     });
   }

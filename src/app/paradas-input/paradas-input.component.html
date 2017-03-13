@@ -1,0 +1,9 @@
+<div id="app-paradas-input">
+  <h4>PARADAS</h4>
+  <input id="paradas-input" 
+    *ngIf="isDataLoaded" 
+    auto-complete 
+    [(ngModel)]="parada" 
+    [source]="paradas" 
+    min-chars="3"/>
+</div>

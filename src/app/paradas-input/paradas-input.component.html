@@ -1,6 +1,7 @@
 <div id="app-paradas-input">
   <h4>PARADAS</h4>
-  <input ng2-auto-complete [source]="paradas"
+  <input auto-complete [source]="paradas"
+    *ngIf="isDataLoaded"
     id="paradas-input"
     [(ngModel)]="parada"
     placeholder="Paradas..."
